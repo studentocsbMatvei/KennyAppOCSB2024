@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textBackground: {
+    fontSize: 40,
     backgroundColor: 'blue',
+    color: 'white',
   },
 });
