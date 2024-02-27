@@ -1,16 +1,26 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
+function TeachersPage({navigation}) {
+  return (
+    <View>
+      <Text style={styles.textBackground}>
+        That's a page for Teachers!
+      </Text>
+    </View>
+  )
+}
+
 function KennysPage({navigation}) {
   return (
     <View>
-      <Text>
+      <Text style={styles.textBackground}>
         That's a page for Kenny!
       </Text>
     </View>
@@ -21,8 +31,12 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.textBackground}>Choose if you are Kenny or teacher</Text>
-      <Button title="I am Kenny" onPress={() => navigation.navigate('KennysPage')}/>
-      <Button title="I am a teacher"/>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('KennysPage')}>
+        <Text style={styles.buttonText}> I am Kenny</Text>
+      </Pressable>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('TeachersPage')}>
+        <Text style={styles.buttonText}> I am a Teacher</Text>
+      </Pressable>
       <StatusBar style="auto" />
     </View>
   );
@@ -34,6 +48,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="KennysPage" component={KennysPage}/>
+        <Stack.Screen name="TeachersPage" component={TeachersPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -50,6 +65,19 @@ const styles = StyleSheet.create({
     fontSize: 40,
     backgroundColor: 'blue',
     color: 'white',
-    fontFamily: 'courier',
+    fontFamily: 'georgia-bold',
+  },
+  buttonStyle: {
+    backgroundColor: 'red',
+    borderRadius: 4,
+    cursor: 'pointer',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 40,
+  },
+  pressedButton: {
+    backgroundColor: 'black',
+    borderRadius: 4,
   },
 });
