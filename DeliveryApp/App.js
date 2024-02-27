@@ -5,25 +5,15 @@ import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import KennysPage from './pages/KennysPage';
+
 const Stack = createNativeStackNavigator();
 
 function TeachersPage({navigation}) {
   return (
-    <View>
-      <Text style={styles.textBackground}>
-        That's a page for Teachers!
-      </Text>
-    </View>
-  )
-}
-
-function KennysPage({navigation}) {
-  return (
-    <View>
-      <Text style={styles.textBackground}>
-        That's a page for Kenny!
-      </Text>
-    </View>
+      <View>
+          <Text style={styles.textBackground}>That is a page for Teachers!</Text>
+      </View>
   )
 }
 
