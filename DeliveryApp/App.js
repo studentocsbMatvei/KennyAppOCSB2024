@@ -6,26 +6,19 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import KennysPage from './pages/KennysPage';
+import TeachersPage from './pages/TeachersPage';
 
 const Stack = createNativeStackNavigator();
-
-function TeachersPage({navigation}) {
-  return (
-      <View>
-          <Text style={styles.textBackground}>That is a page for Teachers!</Text>
-      </View>
-  )
-}
 
 function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.textBackground}>Choose if you are Kenny or teacher</Text>
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('KennysPage')}>
-        <Text style={styles.buttonText}> I am Kenny</Text>
+      <Text style={styles.textBackground}>ASH Eats</Text>
+      <Pressable style={styles.buttonStyle_2} onPress={() => navigation.navigate('KennysPage')}>
+        <Text style={styles.buttonText_2}>DELIVERIES (KENNY)</Text>
       </Pressable>
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('TeachersPage')}>
-        <Text style={styles.buttonText}> I am a Teacher</Text>
+      <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('TeachersPage')}>
+        <Text style={styles.buttonText_1}>ORDER HERE</Text>
       </Pressable>
       <StatusBar style="auto" />
     </View>
@@ -52,19 +45,46 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textBackground: {
-    fontSize: 40,
-    backgroundColor: 'blue',
-    color: 'white',
-    fontFamily: 'georgia-bold',
+    position: 'absolute',
+    top: 70,
+    left: 610,
+    fontSize: 60,
+    color: 'black',
+    fontFamily: 'monospace',
   },
-  buttonStyle: {
-    backgroundColor: 'red',
-    borderRadius: 4,
+  buttonStyle_1: {
+    position: 'absolute',
+    top: 200,
+    left: 540,
+    width: 450,
+    height: 80,
+    backgroundColor: '#1c1b1b',
     cursor: 'pointer',
   },
-  buttonText: {
+  buttonStyle_2: {
+    position: 'absolute',
+    left: 540,
+    top: 340,
+    width: 450,
+    height: 80,
+    backgroundColor: '#e66c02',
+    cursor: 'pointer',
+  },
+  buttonText_1: {
     color: 'white',
     fontSize: 40,
+    position: 'absolute',
+    top: 13,
+    left: 110,
+    fontFamily: 'fantasy',
+  },
+  buttonText_2: {
+    color: 'white',
+    fontSize: 40,
+    position: 'absolute',
+    top: 13,
+    left: 90,
+    fontFamily: 'fantasy',
   },
   pressedButton: {
     backgroundColor: 'black',
