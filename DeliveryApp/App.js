@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable, Dimensions} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -9,6 +9,9 @@ import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
 
 const Stack = createNativeStackNavigator();
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 function HomeScreen({navigation}) {
   return (
@@ -41,50 +44,42 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    padding: 42,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
+    gap: 80,
   },
   textBackground: {
-    position: 'absolute',
-    top: 70,
-    left: 610,
     fontSize: 60,
     color: 'black',
     fontFamily: 'monospace',
   },
   buttonStyle_1: {
-    position: 'absolute',
-    top: 200,
-    left: 540,
-    width: 450,
-    height: 80,
+    width: windowWidth / 3.4,
+    height: windowHeight / 9.5,
     backgroundColor: '#1c1b1b',
     cursor: 'pointer',
   },
   buttonStyle_2: {
-    position: 'absolute',
-    left: 540,
-    top: 340,
-    width: 450,
-    height: 80,
+    width: windowWidth / 3.4,
+    height: windowHeight / 9.5,
     backgroundColor: '#e66c02',
     cursor: 'pointer',
   },
   buttonText_1: {
     color: 'white',
-    fontSize: 40,
-    position: 'absolute',
-    top: 13,
-    left: 110,
+    fontSize: windowWidth / 34,
+    marginTop: 13,
     fontFamily: 'fantasy',
+    textAlign: 'center',
   },
   buttonText_2: {
     color: 'white',
-    fontSize: 40,
-    position: 'absolute',
-    top: 13,
-    left: 90,
+    fontSize: windowWidth / 34,
+    marginTop: 13,
     fontFamily: 'fantasy',
+    textAlign: 'center',
   },
   pressedButton: {
     backgroundColor: 'black',
