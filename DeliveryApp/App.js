@@ -5,6 +5,8 @@ import { StyleSheet, Text, View, Button, Pressable, Dimensions} from 'react-nati
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import {useFonts} from 'expo-font';
+
 import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
 
@@ -53,7 +55,6 @@ const styles = StyleSheet.create({
   textBackground: {
     fontSize: 0.1 * windowWidth,
     color: 'black',
-    fontFamily: 'monospace',
   },
   buttonStyle_0: {
     width: '80%',
@@ -74,7 +75,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontSize: 0.03 * windowWidth,
-    fontFamily: 'sans-serif',
     textAlign: 'center',
   },
 });
