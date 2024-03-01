@@ -17,11 +17,11 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Text style={styles.textBackground}>ASH Eats</Text>
-      <Pressable style={styles.buttonStyle_2} onPress={() => navigation.navigate('KennysPage')}>
-        <Text style={styles.buttonText_2}>DELIVERIES (KENNY)</Text>
+      <Pressable style={styles.buttonStyle_0} onPress={() => navigation.navigate('KennysPage')}>
+        <Text style={styles.buttonText}>DELIVERIES (KENNY)</Text>
       </Pressable>
       <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('TeachersPage')}>
-        <Text style={styles.buttonText_1}>ORDER HERE</Text>
+        <Text style={styles.buttonText}>ORDER HERE</Text>
       </Pressable>
       <StatusBar style="auto" />
     </View>
@@ -45,44 +45,36 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 42,
+    gap: 30,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    gap: 80,
   },
   textBackground: {
-    fontSize: 60,
+    fontSize: 0.1 * windowWidth,
     color: 'black',
     fontFamily: 'monospace',
   },
+  buttonStyle_0: {
+    width: '80%',
+    height: windowHeight / 8,
+    marginBottom: 20,
+    backgroundColor: '#F96E1F',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   buttonStyle_1: {
-    width: windowWidth / 3.4,
-    height: windowHeight / 9.5,
-    backgroundColor: '#1c1b1b',
-    cursor: 'pointer',
-  },
-  buttonStyle_2: {
-    width: windowWidth / 3.4,
-    height: windowHeight / 9.5,
-    backgroundColor: '#e66c02',
-    cursor: 'pointer',
-  },
-  buttonText_1: {
-    color: 'white',
-    fontSize: windowWidth / 34,
-    marginTop: 13,
-    fontFamily: 'fantasy',
-    textAlign: 'center',
-  },
-  buttonText_2: {
-    color: 'white',
-    fontSize: windowWidth / 34,
-    marginTop: 13,
-    fontFamily: 'fantasy',
-    textAlign: 'center',
-  },
-  pressedButton: {
+    width: '80%',
+    height: windowHeight / 8,
+    marginBottom: 20,
     backgroundColor: 'black',
-    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 0.03 * windowWidth,
+    fontFamily: 'sans-serif',
+    textAlign: 'center',
   },
 });
