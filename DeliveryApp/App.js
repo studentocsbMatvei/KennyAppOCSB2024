@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Pressable, Dimensions} from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable, Dimensions, Image} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+  },
+  cupLogo: {
+    width: '50%',
+    height: windowHeight / 8,
   },
   textBackground: {
     fontSize: 0.1 * windowWidth,
