@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   buttonStyle_0: {
-    width: '80%',
+    width: '90%',
     height: windowHeight / 8,
     marginBottom: 20,
     backgroundColor: '#F96E1F',
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonStyle_1: {
-    width: '80%',
+    width: '90%',
     height: windowHeight / 8,
     marginBottom: 20,
     backgroundColor: 'black',
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontSize: 0.03 * windowWidth,
+    fontSize: 0.04 * windowWidth,
     textAlign: 'center',
   },
 });

@@ -26,13 +26,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        gap: 30,
     },
     textStyle: {
         fontSize: windowWidth * 0.1,
         color: 'black',
     },
     buttonText: {
-        fontSize: windowWidth * 0.03,
+        fontSize: windowWidth * 0.04,
         textAlign: 'center',
     },
     buttonStyle: {
