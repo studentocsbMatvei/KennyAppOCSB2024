@@ -18,6 +18,7 @@ const windowHeight = Dimensions.get('window').height;
 function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
+      <Image source={require('./images/ASH-logo.png')}/>
       <Text style={styles.textBackground}>ASH Eats</Text>
       <Pressable style={styles.buttonStyle_0} onPress={() => navigation.navigate('KennysPage')}>
         <Text style={styles.buttonText}>DELIVERIES (KENNY)</Text>
@@ -53,8 +54,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   cupLogo: {
-    width: '50%',
-    height: windowHeight / 8,
+    width: windowWidth / 9,
+    height: '20%',
   },
   textBackground: {
     fontSize: 0.1 * windowWidth,
