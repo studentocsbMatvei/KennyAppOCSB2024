@@ -8,7 +8,8 @@ export default function TeachersPage({navigation}) {
     return (
         <View style={styles.container}>
             <Text style={styles.textStyle}>What is your room number?</Text>
-            <Text style={styles.textStyle}>What would you like to order?</Text>
+            <TextInput placeholder='Enter your room number'/>
+            <Text style={styles.textStyle}>What do you want to order?</Text>
             <Pressable style={styles.buttonStyle}>
                 <Text style={styles.buttonText}>
                     DRINK
