@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         width: '80%',
-        height: windowHeight / 8,
+        height: '10%',
         marginBottom: 20,
         backgroundColor: 'grey',
         justifyContent: 'center',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     },
     buttonStyle_1: {
         width: '80%',
-        height: windowHeight / 8,
+        height: '10%',
         marginBottom: 20,
         backgroundColor: '#F96E1F',
         justifyContent: 'center',

@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Button, Pressable, Dimensions, Image} from 'rea
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {useFonts} from 'expo-font';
+import * as Fonts from 'expo-font';
 
 import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
