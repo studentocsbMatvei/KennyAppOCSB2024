@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Button, Pressable, Dimensions, Image} from 'rea
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import * as Fonts from 'expo-font';
+import {useFonts} from 'expo-font';
 
 import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
@@ -32,6 +32,9 @@ function HomeScreen({navigation}) {
 }
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Impact' : require('./fonts/impact.ttf'),
+  });
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -52,10 +55,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-  },
-  cupLogo: {
-    width: windowWidth / 9,
-    height: '20%',
   },
   textBackground: {
     fontSize: 0.1 * windowWidth,
@@ -78,6 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
+    fontFamily: 'Impact',
     color: 'white',
     fontSize: 0.04 * windowWidth,
     textAlign: 'center',

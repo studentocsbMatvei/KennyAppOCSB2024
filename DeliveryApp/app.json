@@ -15,7 +15,7 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Inter-Black.otf"]
+          "fonts": ["./fonts/IMPACT.TTF"]
         }
       ]
     ],
