@@ -10,6 +10,8 @@ import {useFonts} from 'expo-font';
 import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
 
+import axios from 'axios';
+
 const Stack = createNativeStackNavigator();
 
 const windowWidth = Dimensions.get('window').width;
