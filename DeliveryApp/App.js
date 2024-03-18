@@ -11,6 +11,7 @@ import KennysPage from './pages/KennysPage';
 import TeachersPage from './pages/TeachersPage';
 
 import axios from 'axios';
+import OrdersPage from './pages/OrdersPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="KennysPage" component={KennysPage}/>
         <Stack.Screen name="TeachersPage" component={TeachersPage}/>
+        <Stack.Screen name="OrdersPage" component={OrdersPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

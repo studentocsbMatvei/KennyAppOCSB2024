@@ -9,15 +9,9 @@ export default function TeachersPage({navigation}) {
         <View style={styles.container}>
             <Text style={styles.textStyle}>What is your room number?</Text>
             <TextInput placeholder='Enter your room number'/>
-            <Text style={styles.textStyle}>What do you want to order?</Text>
-            <Pressable style={styles.buttonStyle}>
+            <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('OrdersPage')}>
                 <Text style={styles.buttonText}>
-                    DRINK
-                </Text>
-            </Pressable>
-            <Pressable style={styles.buttonStyle}>
-                <Text style={styles.buttonText}>
-                    FOOD
+                    ORDER HERE
                 </Text>
             </Pressable>
             <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('Home')}>
