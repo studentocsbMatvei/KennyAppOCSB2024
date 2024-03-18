@@ -12,7 +12,7 @@ app.listen(PORT, () => {
 
 app.get('/api/data', (req, res) => {
     const data = {
-        message: 'A message from backend!'
+        message: 'Data from the server'
     };
     res.json(data);
 });

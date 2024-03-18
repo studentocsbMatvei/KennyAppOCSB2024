@@ -9,13 +9,13 @@ function get_message() {
         }
         return response.json();
     })
-    .then(data => {
+    .then(data => { 
         console.log('data recieved: ' + data.message);
+        backend_message = data.message;
     })
     .catch(error => {
         console.log('there was a problem with the fetching operation: ' + error);
     });
-    return backend_message;
 }
 
 console.log('another string printed!');
