@@ -8,7 +8,7 @@ export default function OrdersPage({navigation}) {
     return (
         <View>
             <Text>
-                That's a page for orders!
+                That's My Page!
             </Text>
         </View>
     )
