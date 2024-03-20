@@ -1,22 +1,16 @@
 const { response } = require("express");
 
 let backend_message;
-function get_message() {
-    fetch('http://localhost:5000/api/data')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => { 
-        console.log('data recieved: ' + data.message);
+async function getData() {
+    try {
+        const response = await fetch('http://localhost:5000/api/data');
+        const data = await response.json();
         backend_message = data.message;
-    })
-    .catch(error => {
-        console.log('there was a problem with the fetching operation: ' + error);
-    });
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-console.log('another string printed!');
-get_message();
+getData().then(() => {
+    console.log(backend_message);
+});
