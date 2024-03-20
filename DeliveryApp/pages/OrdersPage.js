@@ -10,19 +10,19 @@ export default function OrderScreen({navigation}) {
     <View style={styles.container}>
       <Text style={styles.textStyle}>What would you like to order?</Text>
       
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('Coffee')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>COFFEE</Text>
       </Pressable>
 
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('Tea')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>TEA</Text>
       </Pressable>
 
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('Muffin')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>I Want Food</Text>
       </Pressable>
 
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('Cookies')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>I Don't Want Food</Text>
       </Pressable>
 
