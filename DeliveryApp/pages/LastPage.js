@@ -62,10 +62,10 @@ const styles = StyleSheet.create({
   },
   backButtonText: {
     color: 'white',
-    fontSize: windowWidth * 0.04,
+    fontSize: windowWidth * 0.02,
   },
   header: {
-    fontSize: windowWidth * 0.06,
+    fontSize: windowWidth * 0.02,
     fontWeight: 'bold',
     marginBottom: 20,
   },
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   label: {
-    fontSize: windowWidth * 0.04,
+    fontSize: windowWidth * 0.02,
     marginBottom: 5,
   },
   input: {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   completeOrderButtonText: {
     color: 'white',
     textAlign: 'center',
-    fontSize: windowWidth * 0.04,
+    fontSize: windowWidth * 0.02,
   },
 });
 
