@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, Dimensions } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -8,9 +8,9 @@ const windowHeight = Dimensions.get('window').height;
 export default function OrderSummaryScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+      <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>BACK</Text>
-      </TouchableOpacity>
+      </Pressable>
 
       <Text style={styles.header}>HERE'S WHAT YOU ORDERED</Text>
 
@@ -37,9 +37,9 @@ export default function OrderSummaryScreen({navigation}) {
         <TextInput style={styles.inputLarge} multiline={true} placeholder="E.g., How would you like your coffee? If ordered food what do you want?" />
       </View>
 
-      <TouchableOpacity style={styles.completeOrderButton}>
+      <Pressable style={styles.completeOrderButton}>
         <Text style={styles.completeOrderButtonText}>COMPLETE ORDER</Text>
-      </TouchableOpacity>
+      </Pressable>
 
       <StatusBar style="auto" />
     </View>
@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 20,
-    justifyContent: 'flex-start', // Align content to the top
+    justifyContent: 'flex-start', 
   },
   backButton: {
-    alignSelf: 'flex-start', // Align button to the left
+    alignSelf: 'flex-start', 
     backgroundColor: 'orange',
     padding: 10,
     borderRadius: 5,
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     padding: 10,
     height: 100,
-    textAlignVertical: 'top', // Align text to the top on Android
+    textAlignVertical: 'top', 
   },
   completeOrderButton: {
     backgroundColor: 'black',
