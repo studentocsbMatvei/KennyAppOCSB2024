@@ -24,12 +24,12 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Image source={require('./images/ASH-logo.png')}/>
-      <Text style={styles.textBackground}>ASH Eats</Text>
+      <Text style={styles.textBackground}>ASH <b>Eats</b></Text>
+      <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('OrdersPage')}>
+        <Text style={styles.buttonText}>ORDER HERE</Text>
+      </Pressable>
       <Pressable style={styles.buttonStyle_0} onPress={() => navigation.navigate('KennysPage')}>
         <Text style={styles.buttonText}>DELIVERIES (KENNY)</Text>
-      </Pressable>
-      <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('TeachersPage')}>
-        <Text style={styles.buttonText}>ORDER HERE</Text>
       </Pressable>
       <StatusBar style="auto" />
     </View>
@@ -38,7 +38,7 @@ function HomeScreen({navigation}) {
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    'Impact' : require('./fonts/impact.ttf'),
+    'calibri' : require('./fonts/calibri.ttf'),
   });
   return (
     <NavigationContainer>
@@ -58,36 +58,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 42,
-    gap: 30,
+    padding: 15,
+    gap: 15,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
   },
   textBackground: {
     fontSize: 0.1 * windowWidth,
-    color: 'black',
+    color: '#322f2a',
   },
   buttonStyle_0: {
-    width: '90%',
-    height: windowHeight / 8,
+    width: '60%',
+    height: windowHeight / 11,
     marginBottom: 20,
-    backgroundColor: '#F96E1F',
+    backgroundColor: '#322f2a',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonStyle_1: {
-    width: '90%',
-    height: windowHeight / 8,
+    width: '60%',
+    height: windowHeight / 11,
     marginBottom: 20,
-    backgroundColor: 'black',
+    backgroundColor: '#c56729',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
-    fontFamily: 'Impact',
+    fontFamily: 'calibri',
     color: 'white',
-    fontSize: 0.04 * windowWidth,
+    fontSize: 0.035 * windowWidth,
     textAlign: 'center',
   },
 });

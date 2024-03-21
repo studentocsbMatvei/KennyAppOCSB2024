@@ -8,7 +8,9 @@ const windowHeight = Dimensions.get('window').height;
 export default function OrderScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>What would you like to order?</Text>
+      <View style={styles.headerContainer}>
+        <Text style={styles.textStyle}>SELECT YOUR ITEM</Text>
+      </View>
       
       <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>COFFEE</Text>
@@ -16,14 +18,6 @@ export default function OrderScreen({navigation}) {
 
       <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
         <Text style={styles.buttonText}>TEA</Text>
-      </Pressable>
-
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
-        <Text style={styles.buttonText}>I Want Food</Text>
-      </Pressable>
-
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
-        <Text style={styles.buttonText}>All of the above</Text>
       </Pressable>
 
       <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
@@ -41,11 +35,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    position: 'relative',
   },
   textStyle: {
-    fontSize: windowWidth * 0.06,
-    fontWeight: 'bold',
-    marginBottom: 20,
+    fontSize: windowWidth * 0.05,
+    color: 'white',
   },
   buttonStyle: {
     flexDirection: 'row',
@@ -54,20 +48,23 @@ const styles = StyleSheet.create({
     padding: 10,
     height: '10%',
     marginBottom: 10,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#ccc',
     borderRadius: 5,
   },
+
   buttonText: {
     fontSize: windowWidth * 0.03,
     marginLeft: 10,
   },
   backButton: {
-    width: '80%',
-    padding: 10,
-    backgroundColor: 'orange',
+    width: '60%',
+    height: windowHeight / 11,
+    marginBottom: 20,
+    backgroundColor: '#322f2a',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 10,
     borderRadius: 5,
     position: 'absolute',
     bottom: 20,
@@ -76,5 +73,13 @@ const styles = StyleSheet.create({
     fontSize: windowWidth * 0.03,
     color: 'white',
   },
-
+  headerContainer: {
+    width: '100%',
+    backgroundColor: '#c56729',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    paddingVertical: 15,
+  },
 });

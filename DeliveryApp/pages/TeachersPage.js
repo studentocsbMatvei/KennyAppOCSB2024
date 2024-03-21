@@ -7,8 +7,14 @@ const windowHeight = Dimensions.get('window').height;
 export default function TeachersPage({navigation}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.textStyle}>What is your room number?</Text>
-            <TextInput placeholder='Enter your room number'/>
+            <Text style={styles.textStyle}><b>What is your room number?</b></Text>
+
+
+            <TextInput
+                style={styles.textStyle2}
+                placeholder='Press to Type...'
+            />
+               
             <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('OrdersPage')}>
                 <Text style={styles.buttonText}>
                     ORDER HERE
@@ -23,6 +29,7 @@ export default function TeachersPage({navigation}) {
     )
 }
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -33,30 +40,38 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontSize: windowWidth * 0.04,
-        color: 'black',
+        color: '#322f2a',
+    },
+    textStyle2: {
+        fontSize: windowWidth * 0.03,
+        color: '#a19f9a',
+        fontFamily: 'Refsan',
+
+
     },
     buttonText: {
-        fontSize: windowWidth * 0.04,
+        fontSize: windowWidth * 0.02,
         textAlign: 'center',
+        color: 'white',
     },
     buttonStyle: {
-        width: '80%',
-        height: '10%',
+        width: '60%',
+        height: windowHeight / 8,
         marginBottom: 20,
-        backgroundColor: 'grey',
+        backgroundColor: '#c56729',
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonStyle_1: {
-        width: '80%',
-        height: '10%',
+        width: '60%',
+        height: windowHeight / 8,
         marginBottom: 20,
-        backgroundColor: '#F96E1F',
+        backgroundColor: '#322f2a',
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonText_1: {
-        fontSize: windowWidth * 0.04,
+        fontSize: windowWidth * 0.02,
         textAlign: 'center',
         color: 'white',
     }

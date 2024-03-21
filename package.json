@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@react-navigation/native": "^6.1.12"
+    "@react-navigation/native": "^6.1.12",
+    "live-server": "^1.2.2",
+    "web": "^0.0.2"
   }
 }

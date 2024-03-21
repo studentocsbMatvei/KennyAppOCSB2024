@@ -8,11 +8,14 @@ const windowHeight = Dimensions.get('window').height;
 export default function OrderSummaryScreen({navigation}) {
   return (
     <View style={styles.container}>
+
+      <View style={styles.headerContainer}>
+        <Text style={styles.textStyle}>ORDER INFO</Text>
+      </View>
+
       <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>BACK</Text>
       </Pressable>
-
-      <Text style={styles.header}>HERE'S WHAT YOU ORDERED</Text>
 
       <View style={styles.inputGroup}>
         <Text style={styles.label}>ROOM NUMBER:</Text>
@@ -41,6 +44,10 @@ export default function OrderSummaryScreen({navigation}) {
         <Text style={styles.completeOrderButtonText}>COMPLETE ORDER</Text>
       </Pressable>
 
+      <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Text style={styles.backButtonText}>BACK</Text>
+      </Pressable>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -53,12 +60,18 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: 'flex-start', 
   },
+ 
   backButton: {
-    alignSelf: 'flex-start', 
-    backgroundColor: 'orange',
+    width: '60%',
+    height: windowHeight / 11,
+    marginBottom: 20,
+    backgroundColor: '#322f2a',
+    justifyContent: 'center',
+    alignItems: 'center',
     padding: 10,
     borderRadius: 5,
-    marginBottom: 20,
+    position: 'absolute',
+    bottom: 20,
   },
   backButtonText: {
     color: 'white',
@@ -120,6 +133,19 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: windowWidth * 0.02,
+  },
+  headerContainer: {
+    width: '100%',
+    backgroundColor: '#c56729',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    paddingVertical: 15,
+  },
+  textStyle: {
+    fontSize: windowWidth * 0.05,
+    color: 'white',
   },
 });
 
