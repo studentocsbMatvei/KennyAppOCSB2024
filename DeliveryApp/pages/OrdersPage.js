@@ -23,7 +23,7 @@ export default function OrderScreen({navigation}) {
       </Pressable>
 
       <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
-        <Text style={styles.buttonText}>I Don't Want Food</Text>
+        <Text style={styles.buttonText}>All of the above</Text>
       </Pressable>
 
       <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
