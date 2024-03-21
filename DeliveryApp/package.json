@@ -16,6 +16,7 @@
     "@react-navigation/stack": "^6.3.23",
     "axios": "^1.6.7",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "expo": "~50.0.7",
     "expo-font": "~11.10.3",
     "expo-status-bar": "~1.11.1",
