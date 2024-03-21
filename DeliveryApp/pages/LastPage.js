@@ -37,7 +37,7 @@ export default function OrderSummaryScreen({navigation}) {
         <TextInput style={styles.inputLarge} multiline={true} placeholder="E.g., How would you like your coffee? If ordered food what do you want?" />
       </View>
 
-      <Pressable style={styles.completeOrderButton}>
+      <Pressable style={styles.completeOrderButton} onPress={() => navigation.navigate('OrdersComplete')}>
         <Text style={styles.completeOrderButtonText}>COMPLETE ORDER</Text>
       </Pressable>
 
