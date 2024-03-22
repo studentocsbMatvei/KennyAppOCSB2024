@@ -12,11 +12,11 @@ export default function OrderScreen({navigation}) {
         <Text style={styles.textStyle}>SELECT YOUR ITEM</Text>
       </View>
       
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('CoffeePage')}>
         <Text style={styles.buttonText}>COFFEE</Text>
       </Pressable>
 
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('LastPage')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('TeaPage')}>
         <Text style={styles.buttonText}>TEA</Text>
       </Pressable>
 

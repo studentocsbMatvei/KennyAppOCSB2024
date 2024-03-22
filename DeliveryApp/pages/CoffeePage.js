@@ -38,7 +38,7 @@ export default function OrderSummaryScreen({navigation}) {
       ordered_by_name: order_name,
       ordered_by_email: order_email,
       room_number: room_number,
-      order_type: 'coffee',
+      order_type: 'COFFEE',
       add_food: food,
       delivery_time: delivery_time,
       comments: comments
@@ -59,6 +59,14 @@ export default function OrderSummaryScreen({navigation}) {
       templateParams,
       publicKey
     );
+        // reset values
+        setOrderName('');
+        setOrderEmail('');
+        setRoomNumber('');
+        food = "NO";
+        setDeliveryTime('');
+        setComments('');
+        navigation.navigate('OrdersComplete')
 
   }
 
@@ -66,7 +74,7 @@ export default function OrderSummaryScreen({navigation}) {
     <View style={styles.container}>
 
       <View style={styles.headerContainer}>
-        <Text style={styles.textStyle}>ORDER INFO</Text>
+        <Text style={styles.textStyle}>ORDER COFFEE INFO</Text>
       </View>
 
 
