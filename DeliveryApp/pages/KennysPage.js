@@ -10,7 +10,7 @@ export default function KennysPage({navigation}) {
         <View style={styles.container}>
             <Text style={styles.textStyle}>Welcome,</Text>
             <Text style={styles.textStyle}>Kenny!</Text>
-            <Pressable style={styles.buttonStyle}>
+            <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('OrdersToComplete')}>
                 <Text style={styles.buttonText}>ORDERS TO COMPLETE</Text>
             </Pressable>
             <Pressable style={styles.buttonStyle}>
