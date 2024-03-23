@@ -188,7 +188,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   inputGroup: {
-    marginBottom: 15,
+    marginBottom: 10,
+    marginTop: 20,
   },
   label: {
     fontSize: windowWidth * 0.02,
@@ -252,7 +253,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     paddingVertical: 15,
-    marginBottom: 20,
+    marginBottom: 30,
     padding: 0,
   },
   textStyle: {
@@ -268,7 +269,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     borderRadius: 5,
-    bottom: 20,
+    bottom: 10,
     position: 'absolute',
 
   },

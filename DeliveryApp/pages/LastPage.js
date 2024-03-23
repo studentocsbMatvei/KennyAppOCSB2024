@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   },
  
   // backButton: {
-  //   width: '60%',
+  //   width: '100%',
   //   height: windowHeight / 11,
   //   marginBottom: 10,
   //   backgroundColor: '#322f2a',
@@ -252,8 +252,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   backButton: {
-    width: '60%',
-    height: windowHeight / 11,
+    width: '100%',
+    height: windowHeight / 15,
     marginBottom: 20,
     backgroundColor: '#322f2a',
     justifyContent: 'center',
