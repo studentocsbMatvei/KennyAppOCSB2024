@@ -16,6 +16,7 @@ import LastPage from './pages/LastPage';
 import CoffeePage from './pages/CoffeePage';
 import TeaPage from './pages/TeaPage';
 import OrdersComplete from './pages/OrdersComplete';
+import OrdersToComplete from './pages/OrdersToComplete';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +54,7 @@ export default function App() {
         <Stack.Screen name="CoffeePage" component={CoffeePage}/>
         <Stack.Screen name="TeaPage" component={TeaPage}/>
         <Stack.Screen name="OrdersComplete" component={OrdersComplete}/>
+        <Stack.Screen name="OrdersToComplete" component={OrdersToComplete}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
