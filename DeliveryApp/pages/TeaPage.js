@@ -82,7 +82,7 @@ export default function OrderSummaryScreen({navigation}) {
       <View style={styles.inputContainer}>
       
       <View style={styles.inputGroup}>
-        <Text style={styles.label}><b>YOUR NAME</b></Text>
+        <Text style={styles.label}>YOUR NAME</Text>
           <TextInput
             onChangeText={ (order_name) => {setOrderName(order_name)}}
             style={styles.input} 
@@ -91,7 +91,7 @@ export default function OrderSummaryScreen({navigation}) {
       </View>
 
       <View style={styles.inputGroup}>
-        <Text style={styles.label}><b>YOUR EMAIL</b></Text>
+        <Text style={styles.label}>YOUR EMAIL</Text>
           <TextInput
             onChangeText={ (order_email) => {setOrderEmail(order_email)}}
             style={styles.input} 
@@ -100,7 +100,7 @@ export default function OrderSummaryScreen({navigation}) {
       </View>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.label}><b>ROOM NUMBER</b></Text>
+          <Text style={styles.label}>ROOM NUMBER</Text>
           <TextInput
             onChangeText={ (room_number) => {setRoomNumber(room_number)}}
             style={styles.input} 
@@ -120,7 +120,7 @@ export default function OrderSummaryScreen({navigation}) {
           <Text style={styles.checkboxLabel}> ADD FOOD</Text>
         </View>
 
-        <Text style={styles.label}><b>DELIVERY TIME</b></Text>
+        <Text style={styles.label}>DELIVERY TIME</Text>
         <View style={styles.inputGroup}>
           <TextInput
             onChangeText={ (delivery_time) => {setDeliveryTime(delivery_time)}}
@@ -184,7 +184,6 @@ const styles = StyleSheet.create({
   // },
   header: {
     fontSize: windowWidth * 0.02,
-    fontWeight: 'bold',
     marginBottom: 20,
   },
   inputGroup: {

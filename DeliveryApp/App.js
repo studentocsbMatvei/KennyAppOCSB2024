@@ -27,7 +27,7 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Image source={require('./images/ASH-logo.png')}/>
-      <Text style={styles.textBackground}>ASH <b>Eats</b></Text>
+      <Text style={styles.textBackground}>ASH Eats</Text>
       <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('OrdersPage')}>
         <Text style={styles.buttonText}>ORDER HERE</Text>
       </Pressable>
@@ -51,8 +51,8 @@ export default function App() {
         <Stack.Screen name="TeachersPage" component={TeachersPage}/>
         <Stack.Screen name="OrdersPage" component={OrdersPage}/>
         <Stack.Screen name="LastPage" component={LastPage}/>
-        <Stack.Screen name="CoffeePage" component={CoffeePage}/>
         <Stack.Screen name="TeaPage" component={TeaPage}/>
+        <Stack.Screen name="CoffeePage" component={CoffeePage}/>
         <Stack.Screen name="OrdersComplete" component={OrdersComplete}/>
         <Stack.Screen name="OrdersToComplete" component={OrdersToComplete}/>
       </Stack.Navigator>
