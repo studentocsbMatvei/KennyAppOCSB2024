@@ -8,7 +8,9 @@ const windowHeight = Dimensions.get('window').height;
 export default function KennysPage({navigation}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.titleTextStyle}>Your Completed Orders</Text>
+            <View style={styles.orangeContainer}>
+                <Text style={styles.titleTextStyle}>Outstanding Orders</Text>
+            </View>
         </View>
     )
 }
@@ -23,6 +25,14 @@ const styles = StyleSheet.create({
     },
     titleTextStyle: {
         fontSize: windowWidth * 0.06,
-        color: 'black',
+        color: 'white',
+    },
+    orangeContainer: {
+        width: "70%",
+        height: windowHeight/8,
+        marginTop: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#c56729',
     },
 });
