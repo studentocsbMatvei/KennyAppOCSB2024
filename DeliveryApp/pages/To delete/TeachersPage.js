@@ -17,7 +17,7 @@ export default function TeachersPage({navigation}) {
                
             <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('OrdersPage')}>
                 <Text style={styles.buttonText}>
-                    ORDER HERE
+                    ORD HERE
                 </Text>
             </Pressable>
             <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('Home')}>
