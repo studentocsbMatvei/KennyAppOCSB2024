@@ -14,5 +14,7 @@ db.serialize(() => {
     samples.forEach((row) => stmt.run(row));
     stmt.finalize();
 });
-
+db.all("SELECT * FROM orders", (err, info) => {
+    console.log(err, info);
+});
 module.exports = db;
