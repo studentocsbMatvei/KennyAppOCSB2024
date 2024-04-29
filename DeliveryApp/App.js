@@ -8,7 +8,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useFonts} from 'expo-font';
 
 import KennysPage from './pages/KennysPage';
-import TeachersPage from './pages/TeachersPage';
 
 import axios from 'axios';
 import OrdersPage from './pages/OrdersPage';
@@ -48,7 +47,6 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="KennysPage" component={KennysPage}/>
-        <Stack.Screen name="TeachersPage" component={TeachersPage}/>
         <Stack.Screen name="OrdersPage" component={OrdersPage}/>
         <Stack.Screen name="LastPage" component={LastPage}/>
         <Stack.Screen name="TeaPage" component={TeaPage}/>
