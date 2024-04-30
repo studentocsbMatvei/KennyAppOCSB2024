@@ -4,6 +4,7 @@ import  { useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable, Dimensions, Checkbox, Button, Alert } from 'react-native';
 import emailjs from '@emailjs/browser';
 
+//collect dimensions of user's screen
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
@@ -29,6 +30,7 @@ export default function OrderSummaryScreen({navigation}) {
     const orderedTemplateId = 'template_miiokxb';
     const publicKey = 'mJrUtk4BFYbqX5xJ3';
 
+    //toggles if user wants food
     var food = "NO"
     if (checked.toString()) { 
       food = "YES"
