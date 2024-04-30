@@ -1,5 +1,10 @@
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database(':memory:');
+const db = new sqlite3.Database(':memory:', (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('successfully connected to a DB!');
+});
 
 db.serialize(() => {
     db.run('CREATE TABLE orders (room_number INTEGER, food TEXT, drink TEXT)');
