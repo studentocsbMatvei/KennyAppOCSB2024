@@ -17,6 +17,8 @@ import TeaPage from './pages/TeaPage';
 import OrdersComplete from './pages/OrdersComplete';
 import OrdersToComplete from './pages/OrdersToComplete';
 
+import SendingData from './pages/SendingData';
+
 const Stack = createNativeStackNavigator();
 
 const windowWidth = Dimensions.get('window').width;
@@ -53,6 +55,7 @@ export default function App() {
         <Stack.Screen name="CoffeePage" component={CoffeePage}/>
         <Stack.Screen name="OrdersComplete" component={OrdersComplete}/>
         <Stack.Screen name="OrdersToComplete" component={OrdersToComplete}/>
+        <Stack.Screen name="SendingData" component={SendingData}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
