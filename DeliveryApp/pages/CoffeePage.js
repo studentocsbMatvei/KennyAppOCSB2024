@@ -4,8 +4,10 @@ import  { useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable, Dimensions, Checkbox, Button, Alert } from 'react-native';
 import emailjs from '@emailjs/browser';
 
+//collects dimensions of screen
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+
 
 export default function OrderSummaryScreen({navigation}) {
   const [room_number, setRoomNumber] = useState('');
@@ -29,6 +31,7 @@ export default function OrderSummaryScreen({navigation}) {
     const orderedTemplateId = 'template_miiokxb';
     const publicKey = 'mJrUtk4BFYbqX5xJ3';
 
+    //toggles whether the user wants food
     var food = "NO"
     if (checked.toString()) { 
       food = "YES"
@@ -193,14 +196,14 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: windowWidth * 0.02,
-    marginBottom: 10,
-    marginTop: 10, 
+    marginBottom: 1,
+    marginTop: 1, 
   },
   input: {
     borderWidth: 1,
     borderColor: 'black',
     padding: 10,
-    marginBottom: 5,
+    marginBottom: 1,
     fontStyle: 'italic',
   },
   checkboxContainer: {
