@@ -6,10 +6,18 @@ import axios from 'axios';
 const API_URL = "http://10.13.21.17:5000/api/data";
 
 export default function SendingData({navigation}) {
+    const [number, setNumber] = useState(null);
+
+    const handleInput = (input) => {
+        setNumber(input);
+    }
+    const handleSubmit = () => {
+        alert('You entered: ' + number);
+    }
     return (
         <View>
-            <Text>That's a page for sending data to the server!</Text>
-            <TextInput placeholder='enter something in here'/>
+            <TextInput onChangeText={handleInput} value={number}/>
+            <Button title='Submit' onPress={handleSubmit} />
         </View>
     );
 }
