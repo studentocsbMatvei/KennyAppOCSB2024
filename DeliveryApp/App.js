@@ -29,7 +29,7 @@ function HomeScreen({navigation}) {
     <View style={styles.container}>
       <Image source={require('./images/ASH-logo.png')}/>
       <Text style={styles.textBackground}>ASH Eats</Text>
-      <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('OrdersPage')}>
+      <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('SendingData')}>
         <Text style={styles.buttonText}>ORDER HERE</Text>
       </Pressable>
       <Pressable style={styles.buttonStyle_0} onPress={() => navigation.navigate('KennysPage')}>

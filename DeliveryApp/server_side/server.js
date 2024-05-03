@@ -20,3 +20,7 @@ app.get('/api/data', (req, res) => {
     };
     res.json(data);
 });
+
+app.post('/api/accept_data', (req, res) => {
+    let accepted_value;
+});
