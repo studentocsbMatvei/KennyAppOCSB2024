@@ -1,4 +1,5 @@
 const sqlite3 = require('sqlite3');
+const prompt = require('prompt-sync')();
 const db = new sqlite3.Database(':memory:', (err) => {
     if (err) {
         return console.error(err.message);
@@ -21,5 +22,18 @@ db.serialize(() => {
 });
 db.all("SELECT * FROM orders", (err, info) => {
     console.log(err, info);
+    while (true) {
+        let user_input = prompt('> ');
+        if (user_input == 'print db') {
+            console.log(err, info);
+        }
+        else if (user_input == 'stop' || user_input == 'break') {
+            console.log('stopped');
+            break;
+        }
+        else {
+            console.log('undefined command');
+        }
+    }
 });
 module.exports = db;
