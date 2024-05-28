@@ -22,5 +22,6 @@ app.get('/api/data', (req, res) => {
 });
 
 app.post('/api/accept_data', (req, res) => {
-    let accepted_value;
+    console.log(req.body.number);
+    return res.json({ok : true});
 });
