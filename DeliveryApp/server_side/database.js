@@ -7,6 +7,22 @@ const db = new sqlite3.Database(':memory:', (err) => {
     console.log('successfully connected to a DB!');
 });
 
+function loop_for_db() { //is not used currently
+    while (true) {
+        let user_input = prompt('> ');
+        if (user_input == 'print db') {
+            console.log(err, info);
+        }
+        else if (user_input == 'stop' || user_input == 'break') {
+            console.log('stopped');
+            break;
+        }
+        else {
+            console.log('undefined command');
+        }
+    }
+}
+
 db.serialize(() => {
     db.run('CREATE TABLE orders (room_number INTEGER, food TEXT, drink TEXT)');
 
@@ -22,18 +38,5 @@ db.serialize(() => {
 });
 db.all("SELECT * FROM orders", (err, info) => {
     console.log(err, info);
-    while (true) {
-        let user_input = prompt('> ');
-        if (user_input == 'print db') {
-            console.log(err, info);
-        }
-        else if (user_input == 'stop' || user_input == 'break') {
-            console.log('stopped');
-            break;
-        }
-        else {
-            console.log('undefined command');
-        }
-    }
 });
 module.exports = db;
