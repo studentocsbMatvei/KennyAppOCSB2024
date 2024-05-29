@@ -28,7 +28,7 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <Image source={require('./images/ASH-logo.png')}/>
-      <Text style={styles.textBackground}>ASH Eats</Text>
+      <Text style={styles.textBackground}>UBER Kenny</Text>
       <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('OrdersPage')}>
         <Text style={styles.buttonText}>ORDER HERE</Text>
       </Pressable>
