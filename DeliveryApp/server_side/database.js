@@ -7,7 +7,7 @@ const db = new sqlite3.Database(':memory:', (err) => {
     console.log('successfully connected to a DB!');
 });
 
-function loop_for_db() { //is not used currently
+function loop_for_db() { //is not used currently due to a bug that doesn't allow to make fetch requests from frontent
     while (true) {
         let user_input = prompt('> ');
         if (user_input == 'print db') {
