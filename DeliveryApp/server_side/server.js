@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
+let storedData = "";
+
 app.listen(PORT, () => {
     console.log('Server is running on port: ' + PORT);
 });
@@ -22,6 +24,8 @@ app.get('/api/data', (req, res) => {
 });
 
 app.post('/api/accept_data', (req, res) => {
-    console.log(req.body.number);
-    return res.json({ok : true});
+    const recievedData = req.body.data;
+    storedData = recievedData;
+    console.log('Recieved and stored data: ' + storedData)
+    res.send('Data stored successfully!');
 });
