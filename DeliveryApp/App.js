@@ -19,6 +19,7 @@ import OrdersToComplete from './pages/OrdersToComplete';
 
 import SendingData from './pages/SendingData';
 import BackendTest from './pages/BackendTest';
+import FixedCoffeePage from './pages/FixedCoffeePage'
 
 const Stack = createNativeStackNavigator();
 
@@ -58,6 +59,7 @@ export default function App() {
         <Stack.Screen name="OrdersToComplete" component={OrdersToComplete}/>
         <Stack.Screen name="SendingData" component={SendingData}/>
         <Stack.Screen name="BackendTest" component={BackendTest}/>
+        <Stack.Screen name="FixedCoffeePage" component={FixedCoffeePage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
