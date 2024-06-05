@@ -16,7 +16,7 @@ export default function OrderScreen({navigation}) {
         <Text style={styles.buttonText}>COFFEE</Text>
       </Pressable>
 
-      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('TeaPage')}>
+      <Pressable style={styles.buttonStyle} onPress={() => navigation.navigate('FixedTeaPage')}>
         <Text style={styles.buttonText}>TEA</Text>
       </Pressable>
 
