@@ -27,7 +27,7 @@ const windowHeight = Dimensions.get('window').height;
 function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <Image source={require('./images/ASH-logo.png')}/>
+      <Image source={require('./images/raf_360x360_075_t_fafafa_ca443f4786-removebg-preview.png')}/>
       <Text style={styles.textBackground}>Uber Kenny</Text>
       <Pressable style={styles.buttonStyle_1} onPress={() => navigation.navigate('OrdersPage')}>
         <Text style={styles.buttonText}>ORDER HERE</Text>
