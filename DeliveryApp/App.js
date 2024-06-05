@@ -18,6 +18,7 @@ import OrdersComplete from './pages/OrdersComplete';
 import OrdersToComplete from './pages/OrdersToComplete';
 
 import SendingData from './pages/SendingData';
+import BackendTest from './pages/BackendTest';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +57,7 @@ export default function App() {
         <Stack.Screen name="OrdersComplete" component={OrdersComplete}/>
         <Stack.Screen name="OrdersToComplete" component={OrdersToComplete}/>
         <Stack.Screen name="SendingData" component={SendingData}/>
+        <Stack.Screen name="BackendTest" component={BackendTest}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

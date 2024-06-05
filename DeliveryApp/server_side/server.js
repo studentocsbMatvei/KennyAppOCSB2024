@@ -20,3 +20,9 @@ app.get('/api/data', (req, res) => {
     };
     res.json(data);
 });
+
+app.post('/api/accept_data', (req, res) => {
+    const recievedData = req.body.data;
+    console.log('Recieved and stored data: ' + recievedData)
+    res.send('Data stored successfully!');
+});

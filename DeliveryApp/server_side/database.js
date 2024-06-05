@@ -1,10 +1,27 @@
 const sqlite3 = require('sqlite3');
+const prompt = require('prompt-sync')();
 const db = new sqlite3.Database(':memory:', (err) => {
     if (err) {
         return console.error(err.message);
     }
     console.log('successfully connected to a DB!');
 });
+
+function loop_for_db() { //is not used currently due to a bug that doesn't allow to make fetch requests from frontent
+    while (true) {
+        let user_input = prompt('> ');
+        if (user_input == 'print db') {
+            console.log(err, info);
+        }
+        else if (user_input == 'stop' || user_input == 'break') {
+            console.log('stopped');
+            break;
+        }
+        else {
+            console.log('undefined command');
+        }
+    }
+}
 
 db.serialize(() => {
     db.run('CREATE TABLE orders (room_number INTEGER, food TEXT, drink TEXT)');

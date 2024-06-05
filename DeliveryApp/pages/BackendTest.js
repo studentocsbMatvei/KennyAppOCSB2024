@@ -3,7 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Pressable, Dimensions } from 'react-native';
 import axios from 'axios';
 
-const API_URL = "http://10.13.21.17:5000/api/data";
+
+//make sure to use a proper IPv4 address by checking it's value in cmd
+const API_URL = "http://10.13.202.52:5000/api/data";
 
 export default function BackendTest({navigation}) {
     const [data, setData] = useState([]);
