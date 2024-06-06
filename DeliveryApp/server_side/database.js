@@ -24,15 +24,15 @@ function loop_for_db() { //is not used currently due to a bug that doesn't allow
 }
 
 db.serialize(() => {
-    db.run('CREATE TABLE orders (room_number INTEGER, food TEXT, drink TEXT)');
+    db.run('CREATE TABLE orders (room_number INTEGER, name TEXT, email TEXT, time TEXT, comments TEXT)');
 
     const samples = [
-        [112, 'cookies', 'coffee'],
-        [234, 'none', 'tea'],
-        [228, 'muffins', 'none']
+        [112, 'Matvei', 'some@email.com', '5 minutes', 'some comment'],
+        [234, 'Jamieson', 'jamieson@ocsb.ca', '2 minutes', 'another comment'],
+        [228, 'Chad', 'some@stu.ocsb.ca', '4 minutes', 'comment']
     ];
 
-    const stmt = db.prepare('INSERT INTO orders (room_number, food, drink) VALUES (?, ?, ?)');
+    const stmt = db.prepare('INSERT INTO orders (room_number, name, email, time, comments) VALUES (?, ?, ?, ?, ?)');
     samples.forEach((row) => stmt.run(row));
     stmt.finalize();
 });
