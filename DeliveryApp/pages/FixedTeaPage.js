@@ -43,7 +43,7 @@ export default function SimplifiedCoffeePage({navigation}) {
             <View style={styles.inputGroup}>
                 <Text style={styles.label}>COMMENTS</Text>
                     <TextInput
-                        style={styles.inputLarge} multiline={true} placeholder="E.g., How would you like your coffee? If selected food what do you want?"
+                        style={styles.inputLarge} multiline={true} placeholder="E.g., How would you like your tea? If selected food what do you want?"
                     />
             </View>
 

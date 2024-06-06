@@ -67,23 +67,6 @@ const styles = StyleSheet.create({
       padding: 20,
     },
    
-    // backButton: {
-    //   width: '60%',
-    //   height: windowHeight / 11,
-    //   marginBottom: 10,
-    //   backgroundColor: '#322f2a',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   padding: 10,
-    //   borderRadius: 5,
-    //   position: 'absolute',
-    //   bottom: 10,
-    // },
-    // backButtonText: {
-    //   color: 'white',
-    //   fontSize: windowWidth * 0.02,
-    //   allignItems: 'center',
-    // },
     header: {
       fontSize: windowWidth * 0.02,
       marginBottom: 20,
