@@ -50,6 +50,7 @@ export default function SimplifiedCoffeePage({navigation}) {
             <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
                 <Text style={styles.backButtonText}>BACK</Text>
             </Pressable>
+            <Button title='submit'/>
         </View>
     )
 }

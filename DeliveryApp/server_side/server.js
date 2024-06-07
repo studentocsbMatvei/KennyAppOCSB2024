@@ -36,23 +36,23 @@ app.post('/api/accept_room_number', (req, res) => {
 app.post('/api/accept_name', (req, res) => {
     const recievedName = req.body.data;
     console.log('Recieved and stored name: ' + recievedName);
-    res.send('name is stored successfully!');
+    res.send('name stored successfully!');
 });
 
 app.post('/api/accept_email', (req, res) => {
     const recievedEmail = req.body.data;
     console.log('Recived and stored email: ' + recievedEmail);
-    res.send('email is stored successfully!');
+    res.send('email stored successfully!');
 });
 
 app.post('api/accept_time', (req, res) => {
     const recievedTime = req.body.data;
     console.log('Recieved and stored delivery time: ' + recievedTime);
-    res.send('time is stored successfully!');
+    res.send('time stored successfully!');
 });
 
 app.post('api/accept_comments', (req, res) => {
     const recievedComment = req.body.data;
     console.log('Recieved and stored comment: ' + recievedComment);
-    res.send('comment is stored successfully!');
+    res.send('comment stored successfully!');
 });

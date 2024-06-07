@@ -2,11 +2,42 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import  { useState} from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable, Dimensions, Checkbox, Button, Alert } from 'react-native';
+import axios from 'axios';
+import { text } from 'body-parser';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export default function SimplifiedCoffeePage({navigation}) {
+const API_URL = "http://10.13.20.16:5000/api/accept_name";
+const API_URL_1 = "http://10.13.20.16:5000/api/accept_email";
+const API_URL_2 = "http://10.13.20.16:5000/api/accept_room_number";
+const API_URL_3 = "http://10.13.20.16:5000/api/accept_time";
+const API_URL_4 = "http://10.13.20.16:5000/api/accept_comments";
+
+
+export default function SimplifiedTeaPage({navigation}) {
+  const [inputName, setInputName] = useState(null);
+  const [inputEmail, setInputEmail] = useState(null);
+  const [inputNumber, setInputNumber] = useState(null);
+  const [inputTime, setInputTime] = useState(null);
+  const [inputComment, setInputComment] = useState(null);
+
+  const handleSendingData = async () => {
+    try {
+      const response_name = await axios.post(API_URL, {data: inputName});
+      console.log(response_name.data);
+      const response_email = await axios.post(API_URL_1, {data: inputEmail});
+      console.log(response_email.data);
+      const response_number = await axios.post(API_URL_2, {data: inputNumber});
+      console.log(response_number.data);
+      const response_time = await axios.post(API_URL_3, {data: inputTime});
+      console.log(response_time.data);
+      const response_comment = await axios.post(API_URL_4, {data: inputComment});
+      console.log(response_comment.data);
+    } catch (error) {
+      console.error('Error occured: ' + error);
+    }
+  };
     return (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -16,6 +47,8 @@ export default function SimplifiedCoffeePage({navigation}) {
                 <Text style={styles.label}>YOUR NAME</Text>
                     <TextInput
                         style={styles.input} 
+                        value={inputName}
+                        onChangeText={(text) => setInputName(text)}
                         placeholder="enter your name" 
                     />
             </View>
@@ -23,6 +56,8 @@ export default function SimplifiedCoffeePage({navigation}) {
                 <Text style={styles.label}>YOUR EMAIL</Text>
                     <TextInput
                         style={styles.input} 
+                        value={inputEmail}
+                        onChangeText={(text) => setInputEmail(text)}
                         placeholder="enter your email" 
                     />
             </View>
@@ -30,26 +65,35 @@ export default function SimplifiedCoffeePage({navigation}) {
                 <Text style={styles.label}>ROOM NUMBER</Text>
                     <TextInput
                         style={styles.input} 
+                        value={inputNumber}
+                        onChangeText={(text) => setInputNumber(text)}
                         placeholder="enter room number" 
                     />
             </View>
-            <Text style={styles.label}>DELIVERY TIME</Text>
             <View style={styles.inputGroup}>
-                <TextInput
-                    style={styles.input} 
-                    placeholder="choose delivery time" 
-                />
+                <Text style={styles.label}>DELIVERY TIME</Text>
+                    <TextInput
+                        style={styles.input} 
+                        value={inputTime}
+                        onChangeText={(text) => setInputTime(text)}
+                        placeholder="select delivery time" 
+                    />
             </View>
             <View style={styles.inputGroup}>
                 <Text style={styles.label}>COMMENTS</Text>
                     <TextInput
-                        style={styles.inputLarge} multiline={true} placeholder="E.g., How would you like your tea? If selected food what do you want?"
+                        style={styles.inputLarge} 
+                        value={inputComment}
+                        multiline={true}
+                        onChangeText={(text) => setInputComment(text)}
+                        placeholder="E.g., How would you like your tea? If selected food what do you want?" 
                     />
             </View>
 
             <Pressable style={styles.backButton} onPress={() => navigation.goBack()}>
                 <Text style={styles.backButtonText}>BACK</Text>
             </Pressable>
+            <Button title='submit' onPress={handleSendingData}/>
         </View>
     )
 }
